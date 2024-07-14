@@ -43,19 +43,19 @@
             <a href="/" class="flex items-center">
               <img
                 src="./images/logo.svg"
-                class="h-9 sm:h-24"
+                class="h-12 sm:h-24 mx-auto"
                 alt="StartupJerez Logo" />
             </a>
             <div class="flex items-center lg:order-2 gap-2">
               <select
                 id="language"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                <option value="ES">🇪🇸 Español</option>
-                <option value="EN">🇺🇸 English</option>
+                <option value="ES">🇪🇸</option>
+                <option value="EN">🇺🇸</option>
               </select>
               <a
                 href="#contact"
-                class="flex gap-2 shrink-0 text-white bg-primary-600 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">
+                class="flex gap-2 shrink-0 text-white bg-primary-600 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2.5 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">
                 <span data-en="Contact">Contacto</span>
               </a>
               <!-- <a href="/discord" class="flex gap-2 shrink-0 text-white bg-primary-600 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">
@@ -143,7 +143,7 @@
             <span
               class="text-sm font-medium"
               data-en="Join the Discord community"
-              >Únete a la comunidad de Discord</span
+              >Únete a la comunidad</span
             >
             <svg
               class="ml-2 w-5 h-5"
@@ -211,7 +211,7 @@
           </div>
         </div>
       </section>
-      <section id="about">
+      <section id="about" class="py-8">
         <div
           class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
           <div class="font-light text-gray-800 sm:text-lg dark:text-gray-400">
@@ -240,7 +240,7 @@
             alt="Jerez de la Frontera" />
         </div>
       </section>
-      <section id="coworking">
+      <section id="coworking" class="py-8">
         <div
           class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 grid-cols-1 lg:py-16 lg:px-6 flex flex-col">
           <div
@@ -321,7 +321,7 @@
           </div>
         </div>
       </section>
-      <section id="team">
+      <section id="team" class="py-8">
         <div class="py-8 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
           <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
             <h2
@@ -513,7 +513,8 @@
                   d="M304 48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zm0 416a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM48 304a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm464-48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM142.9 437A48 48 0 1 0 75 369.1 48 48 0 1 0 142.9 437zm0-294.2A48 48 0 1 0 75 75a48 48 0 1 0 67.9 67.9zM369.1 437A48 48 0 1 0 437 369.1 48 48 0 1 0 369.1 437z" />
               </svg>
             </div>
-            <div>
+            <div class="flex flex-col md:flex-row gap-4">
+              <div class="w-full">
               <label
                 for="name"
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
@@ -527,8 +528,8 @@
                 placeholder="Escribe tu nombre completo"
                 data-en="Write your full name"
                 required />
-            </div>
-            <div>
+              </div>
+              <div class="w-full">
               <label
                 for="email"
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
@@ -542,6 +543,7 @@
                 placeholder="email@email.com"
                 pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
                 required />
+              </div>
             </div>
             <div>
               <label
@@ -640,7 +642,7 @@
             class="flex justify-center items-center text-2xl font-semibold text-gray-900 dark:text-white">
             <img
               src="./images/logo.svg"
-              class="h-9 sm:h-24"
+              class="h-12 sm:h-24"
               alt="StartupJerez Logo" />
           </a>
           <p class="my-6 text-gray-800 dark:text-gray-400">
