@@ -1,286 +1,730 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es" class="bg-primary-300">
-<head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>StartupJerez - comunidad de emprendedores y startups de Jerez de la Frontera</title>
-  <meta name="description" content="Únete si eres estudiante, emprendedor, quieres aprender de startups, conocer a tus futuros socios, crear un negocio, conocer profesionales del sector, o simplemente conectar con otros emprendedores!" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="js/tailwind.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/i18n-language@1.0.8/i18n-language.min.js"></script>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      StartupJerez - comunidad de emprendedores y startups de Jerez de la
+      Frontera
+    </title>
+    <meta
+      name="description"
+      content="Únete si eres estudiante, emprendedor, quieres aprender de startups, conocer a tus futuros socios, crear un negocio, conocer profesionales del sector, o simplemente conectar con otros emprendedores!" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tailwind.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/i18n-language@1.0.8/i18n-language.min.js"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
     </style>
-    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/global.css" />
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TWCZ0SSM8W"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-TWCZ0SSM8W"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'G-TWCZ0SSM8W');
-</script>
-
-</head>
-<body class="bg-gradient-to-b from-white to-primary-300 h-full">
-  <main class="container mx-auto">
-    <header class="sticky top-0 z-10">
-      <nav class="border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800 backdrop-blur-md">
+      gtag("config", "G-TWCZ0SSM8W");
+    </script>
+  </head>
+  <body class="bg-gradient-to-b from-white to-primary-300 h-full">
+    <main class="container mx-auto">
+      <header class="sticky top-0 z-10">
+        <nav
+          class="border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800 backdrop-blur-md">
           <div class="flex flex-wrap justify-between items-center mx-auto">
-              <a href="/" class="flex items-center">
-                  <img src="./images/logo.svg" class="h-9 sm:h-24" alt="StartupJerez Logo" />
+            <a href="/" class="flex items-center">
+              <img
+                src="./images/logo.svg"
+                class="h-9 sm:h-24"
+                alt="StartupJerez Logo" />
+            </a>
+            <div class="flex items-center lg:order-2 gap-2">
+              <select
+                id="language"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <option value="ES">🇪🇸 Español</option>
+                <option value="EN">🇺🇸 English</option>
+              </select>
+              <a
+                href="#contact"
+                class="flex gap-2 shrink-0 text-white bg-primary-600 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">
+                <span data-en="Contact">Contacto</span>
               </a>
-              <div class="flex items-center lg:order-2 gap-2">
-                  <select  id="language" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                    <option value="ES">🇪🇸 Español</option>
-                    <option value="EN">🇺🇸 English</option>
-                  </select>
-                  <a href="#contact" class="flex gap-2 shrink-0 text-white bg-primary-600 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">
-                    <span data-en="Contact">Contacto</span>
-                  </a>
-                  <!-- <a href="/discord" class="flex gap-2 shrink-0 text-white bg-primary-600 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">
+              <!-- <a href="/discord" class="flex gap-2 shrink-0 text-white bg-primary-600 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" width="71" height="55" viewBox="0 0 71 55" fill="currentColor"><g><path d="M60.1045 4.8978C55.5792 2.8214 50.7265 1.2916 45.6527 0.41542C45.5603 0.39851 45.468 0.440769 45.4204 0.525289C44.7963 1.6353 44.105 3.0834 43.6209 4.2216C38.1637 3.4046 32.7345 3.4046 27.3892 4.2216C26.905 3.0581 26.1886 1.6353 25.5617 0.525289C25.5141 0.443589 25.4218 0.40133 25.3294 0.41542C20.2584 1.2888 15.4057 2.8186 10.8776 4.8978C10.8384 4.9147 10.8048 4.9429 10.7825 4.9795C1.57795 18.7309 -0.943561 32.1443 0.293408 45.3914C0.299005 45.4562 0.335386 45.5182 0.385761 45.5576C6.45866 50.0174 12.3413 52.7249 18.1147 54.5195C18.2071 54.5477 18.305 54.5139 18.3638 54.4378C19.7295 52.5728 20.9469 50.6063 21.9907 48.5383C22.0523 48.4172 21.9935 48.2735 21.8676 48.2256C19.9366 47.4931 18.0979 46.6 16.3292 45.5858C16.1893 45.5041 16.1781 45.304 16.3068 45.2082C16.679 44.9293 17.0513 44.6391 17.4067 44.3461C17.471 44.2926 17.5606 44.2813 17.6362 44.3151C29.2558 49.6202 41.8354 49.6202 53.3179 44.3151C53.3935 44.2785 53.4831 44.2898 53.5502 44.3433C53.9057 44.6363 54.2779 44.9293 54.6529 45.2082C54.7816 45.304 54.7732 45.5041 54.6333 45.5858C52.8646 46.6197 51.0259 47.4931 49.0921 48.2228C48.9662 48.2707 48.9102 48.4172 48.9718 48.5383C50.038 50.6034 51.2554 52.5699 52.5959 54.435C52.6519 54.5139 52.7526 54.5477 52.845 54.5195C58.6464 52.7249 64.529 50.0174 70.6019 45.5576C70.6551 45.5182 70.6887 45.459 70.6943 45.3942C72.1747 30.0791 68.2147 16.7757 60.1968 4.9823C60.1772 4.9429 60.1437 4.9147 60.1045 4.8978ZM23.7259 37.3253C20.2276 37.3253 17.3451 34.1136 17.3451 30.1693C17.3451 26.225 20.1717 23.0133 23.7259 23.0133C27.308 23.0133 30.1626 26.2532 30.1066 30.1693C30.1066 34.1136 27.28 37.3253 23.7259 37.3253ZM47.3178 37.3253C43.8196 37.3253 40.9371 34.1136 40.9371 30.1693C40.9371 26.225 43.7636 23.0133 47.3178 23.0133C50.9 23.0133 53.7545 26.2532 53.6986 30.1693C53.6986 34.1136 50.9 37.3253 47.3178 37.3253Z" fill="currentColor"></path></g></svg>
                     <span data-en="Accept invitation">Aceptar invicatión</span>
                   </a> -->
-                  <button id="menu-toggle" data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-800 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
-                      <span class="sr-only">Open main menu</span>
-                      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-                      <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                  </button>
-              </div>
-              <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
-                  <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
-                      <li>
-                          <a href="#about" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700" data-en="About StartupJerez">Acerca de StartupJerez</a>
-                      </li>
-                      <li>
-                          <a href="#team" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700" data-en="Team">Equipo</a>
-                      </li>
-                      <li>
-                          <a href="#coworking" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700" data-en="Coworking">Coworking</a>
-                      </li>
-                      <!-- <li>
+              <button
+                id="menu-toggle"
+                data-collapse-toggle="mobile-menu-2"
+                type="button"
+                class="inline-flex items-center p-2 ml-1 text-sm text-gray-800 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                aria-controls="mobile-menu-2"
+                aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    fill-rule="evenodd"
+                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <svg
+                  class="hidden w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    fill-rule="evenodd"
+                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </button>
+            </div>
+            <div
+              class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
+              id="mobile-menu-2">
+              <ul
+                class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+                <li>
+                  <a
+                    href="#about"
+                    class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                    data-en="About StartupJerez"
+                    >Acerca de StartupJerez</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#team"
+                    class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                    data-en="Team"
+                    >Equipo</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#coworking"
+                    class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                    data-en="Coworking"
+                    >Coworking</a
+                  >
+                </li>
+                <!-- <li>
                           <a href="#contact" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700" data-en="Contact">Contacto</a>
                       </li> -->
-                  </ul>
-              </div>
+              </ul>
+            </div>
           </div>
-      </nav>
-  </header>
-    <section class="dark:bg-gray-900">
-      <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
-          <a href="/discord" class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 focus:ring-4 focus:ring-primary-300 border">
-              <span class="text-xs bg-primary-600 rounded-full text-white px-4 py-1.5 mr-3" data-en="New">Nuevo</span> <span class="text-sm font-medium" data-en="Join the Discord community">Únete a la comunidad de Discord</span> 
-              <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+        </nav>
+      </header>
+      <section class="dark:bg-gray-900">
+        <div
+          class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
+          <a
+            href="/discord"
+            class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 focus:ring-4 focus:ring-primary-300 border">
+            <span
+              class="text-xs bg-primary-600 rounded-full text-white px-4 py-1.5 mr-3"
+              data-en="New"
+              >Nuevo</span
+            >
+            <span
+              class="text-sm font-medium"
+              data-en="Join the Discord community"
+              >Únete a la comunidad de Discord</span
+            >
+            <svg
+              class="ml-2 w-5 h-5"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                fill-rule="evenodd"
+                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                clip-rule="evenodd"></path>
+            </svg>
           </a>
-          <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white" data-en="Community of entrepreneurs">Comunidad de emprendedores</h1>
-          <p class="mb-8 text-lg font-normal text-gray-800 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400" data-en="At StartupJerez we focus on startups and entrepreneurs where technology, innovation, and capital can unlock long-term value and drive economic growth.">
-            En StartupJerez nos enfocamos en startups y emprendedores donde la tecnología, la innovación y el capital pueden generar valor a largo plazo e impulsar el crecimiento económico.
+          <h1
+            class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white"
+            data-en="Community of entrepreneurs">
+            Comunidad de emprendedores
+          </h1>
+          <p
+            class="mb-8 text-lg font-normal text-gray-800 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400"
+            data-en="At StartupJerez, our mission is to foster the entrepreneurial and tech ecosystem in Jerez de la Frontera. We aim to support the creation of innovative products and services, helping to retain and attract talent to our city. ">
+            En StartupJerez buscamos promover el ecosistema
+            emprendedor-tecnológico y apoyar la creación de productos o
+            servicios innovadores en Jerez de la Frontera, con el objetivo de
+            mantener y atraer el talento en esta ciudad.
           </p>
-          <div class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-              <a href="#about" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
-                  <span data-en="Learn more">Saber más</span>
-                  <svg class="ml-1 -mr-1 w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8 10 4 4 4-4"/>
-                  </svg>
-                  
-              </a>
-              <!-- <a href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
-                  <svg class="mr-2 -ml-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path></svg>
-                  Watch video
-              </a> -->
+          <div
+            class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+            <a
+              href="#about"
+              class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+              <span data-en="Learn more">Saber más</span>
+              <svg
+                class="ml-1 -mr-1 w-6 h-6"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24">
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m8 10 4 4 4-4" />
+              </svg>
+            </a>
+            <!--
+            <a href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+              <svg class="mr-2 -ml-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path></svg>
+              Watch video
+            </a>
+            -->
           </div>
-          <div class="">
-              <span class="font-semibold text-slate-500 uppercase mb-4 block" data-en="FEATURED IN">PRESENTADO EN</span>
-              <img src="./images/logos-1024x48.png" class="mx-auto max-w-5xl w-full" alt="Featured logos"/>
-          </div> 
-      </div>
-  </section>
-  <section id="about">
-    <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
-        <div class="font-light text-gray-800 sm:text-lg dark:text-gray-400">
-            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white" data-en="About StartupJerez">Acerca de StartupJerez</h2>
-            <p class="mb-4" data-en="StartupJerez is a community of entrepreneurs and startups from Jerez de la Frontera.">StartupJerez es una comunidad de emprendedores y startups de Jerez de la Frontera.</p>
-            <p data-en="Join if you are a student, entrepreneur, want to learn about startups, meet your future partners, create a business, meet professionals in the sector, or simply connect with other entrepreneurs.">Únete si eres estudiante, emprendedor, quieres aprender de startups, conocer a tus futuros socios, crear un negocio, conocer profesionales del sector, o simplemente conectar con otros emprendedores.</p>
+          <div>
+            <span
+              class="font-semibold text-slate-500 uppercase mb-4 block"
+              data-en="FEATURED IN"
+              >PRESENTADO EN</span
+            >
+            <img
+              src="./images/logos-1024x48.png"
+              class="mx-auto max-w-5xl w-full"
+              alt="Featured logos" />
+          </div>
         </div>
-        <img class="w-full rounded-lg shadow-lg mt-4 lg:mt-0" src="./images/jerez-de-la-frontera.webp" alt="Jerez de la Frontera">
-    </div>
-</section>
-  <section id="coworking">
-    <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 grid-cols-1 lg:py-16 lg:px-6 flex flex-col">
-      <div class="grid grid-cols-2 gap-4 mt-8 mb-8 md:mb-0 order-2 l:order-1">
-        <img class="w-full rounded-lg shadow-lg" src="./images/coworking-1.jpg" alt="Coworking Jerez">
-        <img class="mt-4 w-full lg:mt-10 rounded-lg shadow-lg" src="./images/coworking-2.jpg" alt="Coworking Jerez">
-        <img class="mt-4 w-full lg:mt-10 rounded-lg shadow-lg" src="./images/coworking-3.jpg" alt="Coworking Jerez">
-        <img class="mt-4 w-full lg:mt-10 rounded-lg shadow-lg" src="./images/coworking-4.jpg" alt="Coworking Jerez">
-    </div>
-        <div class="font-light text-gray-800 sm:text-lg dark:text-gray-400 order-1 lg:order-2">
-            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white" data-en="Coworking Jerez">Coworking Jerez</h2>
-            <p class="mb-4" data-en="A place focused on improving the productivity of companies in the creative sector through training processes, intensive promotion of their digital transformation and specialized technical equipment.">
-              Un lugar enfocado a mejorar la  productividad de las empresas del sector creativo a través de procesos de formación, el fomento intensivo de su transformación digital y un equipamiento técnico especializado.
+      </section>
+      <section id="about">
+        <div
+          class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+          <div class="font-light text-gray-800 sm:text-lg dark:text-gray-400">
+            <h2
+              class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+              data-en="About StartupJerez">
+              Acerca de StartupJerez
+            </h2>
+            <p
+              class="mb-4"
+              data-en="StartupJerez is a community of entrepreneurs and startups from Jerez de la Frontera.">
+              StartupJerez es una comunidad de emprendedores y startups de Jerez
+              de la Frontera.
             </p>
-            <p class="mb-4" data-en="An innovative, open and multidisciplinary space to host cultural activities, business meetings, training workshops, product presentations, exhibitions or conferences. Equipped with everything you need to undertake, and in the center of Jerez.">
-              Un espacio innovador, abierto y multidisciplinar para albergar actividades culturales, reuniones de empresas, talleres de formación, presentaciones de productos, exposiciones o conferencias.
-              Equipado con todo lo que necesitas para emprender, y en el centro de Jerez.
+            <p
+              data-en="Join if you are a student, entrepreneur, want to learn about startups, meet your future partners, create a business, meet professionals in the sector, or simply connect with other entrepreneurs.">
+              Únete si eres estudiante, emprendedor, quieres aprender de
+              startups, conocer a tus futuros socios, crear un negocio, conocer
+              profesionales del sector, o simplemente conectar con otros
+              emprendedores.
             </p>
-            <p class="mb-4" data-en="Come on, we can't wait for you to join our community!">
+          </div>
+          <img
+            class="w-full rounded-lg shadow-lg mt-4 lg:mt-0"
+            src="./images/jerez-de-la-frontera.webp"
+            alt="Jerez de la Frontera" />
+        </div>
+      </section>
+      <section id="coworking">
+        <div
+          class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 grid-cols-1 lg:py-16 lg:px-6 flex flex-col">
+          <div
+            class="grid grid-cols-2 gap-4 mt-8 mb-8 md:mb-0 order-2 l:order-1">
+            <img
+              class="w-full rounded-lg shadow-lg"
+              src="./images/coworking-1.jpg"
+              alt="Coworking Jerez" />
+            <img
+              class="mt-4 w-full lg:mt-10 rounded-lg shadow-lg"
+              src="./images/coworking-2.jpg"
+              alt="Coworking Jerez" />
+            <img
+              class="mt-4 w-full lg:mt-10 rounded-lg shadow-lg"
+              src="./images/coworking-3.jpg"
+              alt="Coworking Jerez" />
+            <img
+              class="mt-4 w-full lg:mt-10 rounded-lg shadow-lg"
+              src="./images/coworking-4.jpg"
+              alt="Coworking Jerez" />
+          </div>
+          <div
+            class="font-light text-gray-800 sm:text-lg dark:text-gray-400 order-1 lg:order-2">
+            <img
+              src="./images/coworking-logo.png"
+              alt="Coworking Jerez logo"
+              class="w-24" />
+            <h2
+              class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+              data-en="Coworking Jerez">
+              Coworking Jerez
+            </h2>
+            <p
+              class="mb-4"
+              data-en="A place focused on improving the productivity of companies in the creative sector through training processes, intensive promotion of their digital transformation and specialized technical equipment.">
+              Un lugar enfocado a mejorar la productividad de las empresas del
+              sector creativo a través de procesos de formación, el fomento
+              intensivo de su transformación digital y un equipamiento técnico
+              especializado.
+            </p>
+            <p
+              class="mb-4"
+              data-en="An innovative, open and multidisciplinary space to host cultural activities, business meetings, training workshops, product presentations, exhibitions or conferences. Equipped with everything you need to undertake, and in the center of Jerez.">
+              Un espacio innovador, abierto y multidisciplinar para albergar
+              actividades culturales, reuniones de empresas, talleres de
+              formación, presentaciones de productos, exposiciones o
+              conferencias. Equipado con todo lo que necesitas para emprender, y
+              en el centro de Jerez.
+            </p>
+            <p
+              class="mb-4"
+              data-en="Come on, we can't wait for you to join our community!">
               ¡Venga, que estamos deseando que te unas a nuestra comunidad!
             </p>
-            <a href="https://coworkingjerez.com/" target="_blank" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 bg-gray-100 hover:bg-white focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
-              <span data-en="Visit Coworking Jerez">Visita Coworking Jerez</span>
-              <svg class="w-4 h-4 ml-2 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 14v4.833A1.166 1.166 0 0 1 16.833 20H5.167A1.167 1.167 0 0 1 4 18.833V7.167A1.166 1.166 0 0 1 5.167 6h4.618m4.447-2H20v5.768m-7.889 2.121 7.778-7.778"/>
+            <a
+              href="https://coworkingjerez.com/"
+              target="_blank"
+              class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 bg-gray-100 hover:bg-white focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+              <span data-en="Visit Coworking Jerez"
+                >Visita Coworking Jerez</span
+              >
+              <svg
+                class="w-4 h-4 ml-2 text-gray-800 dark:text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24">
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M18 14v4.833A1.166 1.166 0 0 1 16.833 20H5.167A1.167 1.167 0 0 1 4 18.833V7.167A1.166 1.166 0 0 1 5.167 6h4.618m4.447-2H20v5.768m-7.889 2.121 7.778-7.778" />
               </svg>
-          </a>
+            </a>
+          </div>
         </div>
-    </div>
-</section>
-<section id="team">
-  <div class="py-8 mx-auto max-w-screen-xl lg:py-16 lg:px-6 ">
-      <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
-          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white" data-en="Our Team">Nuestro equipo</h2>
-          <p class="font-light text-gray-800 lg:mb-16 sm:text-xl dark:text-gray-400" data-en="over 30 years of combined experience in building digital products and startups, delivering innovative, high-quality solutions that push the boundaries of technology and design.">Más de 30 años de experiencia combinada en la creación de productos digitales y nuevas empresas, brindando soluciones innovadoras y de alta calidad que superan los límites de la tecnología y el diseño.</p>
-      </div> 
-      <div class="grid gap-8 mb-6 lg:mb-16 lg:grid-cols-2 items-center">
-          <div class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700 text-center sm:text-left">
-                  <img class="h-48 rounded-lg sm:rounded-none sm:rounded-l-lg mx-auto mt-5 sm:m-0" src="./images/denis-ciccale.png" alt="Denis Ciccale Avatar">
+      </section>
+      <section id="team">
+        <div class="py-8 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+          <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
+            <h2
+              class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+              data-en="Our Team">
+              Nuestro equipo
+            </h2>
+            <p
+              class="font-light text-gray-800 lg:mb-16 sm:text-xl dark:text-gray-400"
+              data-en="over 30 years of combined experience in building digital products and startups, delivering innovative, high-quality solutions that push the boundaries of technology and design.">
+              Más de 30 años de experiencia combinada en la creación de
+              productos digitales y nuevas empresas, brindando soluciones
+              innovadoras y de alta calidad que superan los límites de la
+              tecnología y el diseño.
+            </p>
+          </div>
+          <div class="grid gap-8 mb-6 lg:mb-16 lg:grid-cols-2 items-center">
+            <div
+              class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700 text-center sm:text-left">
+              <img
+                class="h-48 rounded-lg sm:rounded-none sm:rounded-l-lg mx-auto mt-5 sm:m-0"
+                src="./images/denis-ciccale.png"
+                alt="Denis Ciccale Avatar" />
               <div>
                 <div class="p-5 md:py-0">
-                  <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  <h3
+                    class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
                     Denis Ciccale
                   </h3>
-                  <span class="text-gray-800 dark:text-gray-400">CEO & Co-Founder</span>
-                  <p class="mt-3 mb-4 font-light text-gray-800 dark:text-gray-400 italic">Write short description here</p>
-                  <ul class="flex justify-center sm:justify-start space-x-4 sm:mt-0">
-                      <li>
-                          <a href="http://x.com/dciccale" target="_blank" class="text-gray-800 hover:text-gray-900 dark:hover:text-white">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1232_65633)"><path d="M12.6411 0.666656H15.0936L9.70876 6.79795L16 15.1152H11.063L7.1976 10.0609L2.77241 15.1152H0.319893L6.02466 8.55736L0 0.666656H5.05965L8.55182 5.28378L12.6411 0.666656ZM11.7827 13.6757H13.1423L4.34522 2.05286H2.88437L11.7827 13.6757Z" fill="currentColor"></path></g><defs><clipPath id="clip0_1232_65633"><rect width="16" height="16" fill="white"></rect></clipPath></defs></svg>
-                          </a>
-                      </li>
-                      <li>
-                          <a href="https://www.linkedin.com/in/denisciccale/" target="_blank" class="text-gray-800 hover:text-gray-900 dark:hover:text-white">
-                            <svg stroke="currentColor" fill="currentColor" strokewidth="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" data-bs-toggle="tooltip"></path></svg>
-                          </a>
-                      </li>
+                  <span
+                    class="text-gray-800 dark:text-gray-400"
+                    data-en="Technology Director"
+                    >Director Tecnológico</span
+                  >
+                  <!--
+                  <p
+                    class="mt-3 mb-4 font-light text-gray-800 dark:text-gray-400 italic">
+                    Write short description here
+                  </p>
+                  -->
+                  <ul
+                    class="flex justify-center sm:justify-start space-x-4 mt-2">
+                    <li>
+                      <a
+                        href="https://www.linkedin.com/in/denisciccale/"
+                        target="_blank"
+                        class="text-gray-800 hover:text-gray-900 dark:hover:text-white">
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          strokewidth="0"
+                          viewBox="0 0 448 512"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                            data-bs-toggle="tooltip"></path>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="http://x.com/dciccale"
+                        target="_blank"
+                        class="text-gray-800 hover:text-gray-900 dark:hover:text-white">
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_1232_65633)">
+                            <path
+                              d="M12.6411 0.666656H15.0936L9.70876 6.79795L16 15.1152H11.063L7.1976 10.0609L2.77241 15.1152H0.319893L6.02466 8.55736L0 0.666656H5.05965L8.55182 5.28378L12.6411 0.666656ZM11.7827 13.6757H13.1423L4.34522 2.05286H2.88437L11.7827 13.6757Z"
+                              fill="currentColor"></path>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1232_65633">
+                              <rect width="16" height="16" fill="white"></rect>
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </a>
+                    </li>
                   </ul>
                 </div>
               </div>
-          </div> 
-          <div class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700 text-center sm:text-left">
-                  <img class="h-48 rounded-lg sm:rounded-none sm:rounded-l-lg mx-auto mt-5 sm:m-0" src="./images/eugenio-ciccale.png" alt="Eugenio Ciccale Avatar">
-                  <div>
-              <div class="p-5 md:py-0">
-                  <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+            </div>
+            <div
+              class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700 text-center sm:text-left">
+              <img
+                class="h-48 rounded-lg sm:rounded-none sm:rounded-l-lg mx-auto mt-5 sm:m-0"
+                src="./images/eugenio-ciccale.png"
+                alt="Eugenio Ciccale Avatar" />
+              <div>
+                <div class="p-5 md:py-0">
+                  <h3
+                    class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
                     Eugenio Ciccale
                   </h3>
-                  <span class="text-gray-800 dark:text-gray-400">CPDO - Chief Product & Design Officer</span>
-                  <p class="mt-3 mb-4 font-light text-gray-800 dark:text-gray-400 italic">Write short description here</p>
-                  <ul class="flex justify-center sm:justify-start space-x-4 sm:mt-0">
+                  <span
+                    class="text-gray-800 dark:text-gray-400"
+                    data-en="Product & Design Director"
+                    >Director de Producto &amp; Diseño</span
+                  >
+                  <!--
+                  <p
+                    class="mt-3 mb-4 font-light text-gray-800 dark:text-gray-400 italic">
+                    Write short description here
+                  </p>
+                  -->
+                  <ul
+                    class="flex justify-center sm:justify-start space-x-4 mt-2">
                     <li>
-                      <a href="http://x.com/keno_reloaded" target="_blank" class="text-gray-800 hover:text-gray-900 dark:hover:text-white">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1232_65633)"><path d="M12.6411 0.666656H15.0936L9.70876 6.79795L16 15.1152H11.063L7.1976 10.0609L2.77241 15.1152H0.319893L6.02466 8.55736L0 0.666656H5.05965L8.55182 5.28378L12.6411 0.666656ZM11.7827 13.6757H13.1423L4.34522 2.05286H2.88437L11.7827 13.6757Z" fill="currentColor"></path></g><defs><clipPath id="clip0_1232_65633"><rect width="16" height="16" fill="white"></rect></clipPath></defs></svg>
+                      <a
+                        href="https://www.linkedin.com/in/eugeniociccale/"
+                        target="_blank"
+                        class="text-gray-800 hover:text-gray-900 dark:hover:text-white">
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          strokewidth="0"
+                          viewBox="0 0 448 512"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                            data-bs-toggle="tooltip"></path>
+                        </svg>
                       </a>
-                  </li>
-                  <li>
-                      <a href="https://www.linkedin.com/in/eugeniociccale/" target="_blank" class="text-gray-800 hover:text-gray-900 dark:hover:text-white">
-                        <svg stroke="currentColor" fill="currentColor" strokewidth="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" data-bs-toggle="tooltip"></path></svg>
+                    </li>
+                    <li>
+                      <a
+                        href="http://x.com/keno_reloaded"
+                        target="_blank"
+                        class="text-gray-800 hover:text-gray-900 dark:hover:text-white">
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_1232_65633)">
+                            <path
+                              d="M12.6411 0.666656H15.0936L9.70876 6.79795L16 15.1152H11.063L7.1976 10.0609L2.77241 15.1152H0.319893L6.02466 8.55736L0 0.666656H5.05965L8.55182 5.28378L12.6411 0.666656ZM11.7827 13.6757H13.1423L4.34522 2.05286H2.88437L11.7827 13.6757Z"
+                              fill="currentColor"></path>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1232_65633">
+                              <rect width="16" height="16" fill="white"></rect>
+                            </clipPath>
+                          </defs>
+                        </svg>
                       </a>
-                  </li>
+                    </li>
                   </ul>
+                </div>
               </div>
             </div>
-          </div> 
-
-      </div>  
-  </div>
-</section>
-  <section id="contact" class="bg-white/60 border border-white dark:bg-gray-900 md:rounded-3xl relative">
-    <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white" data-en="Contact Us">Contáctanos</h2>
-        <p class="mb-8 lg:mb-16 font-light text-center text-gray-800 dark:text-gray-400 sm:text-xl" data-en="Do you have questions? Want to request feedback about your project? Need advice about your Business plan? Let us know.">¿Tienes preguntas? ¿Quieres solicitar comentarios sobre tu proyecto? ¿Necesitas asesoramiento sobre tu plan de Negocios? Haznos saber.</p>
-        <form id="contact-form" action="#" class="space-y-8">
-          <div id="spinner" class="absolute inset-0 flex items-center justify-center hidden bg-white/50 fill-slate-500">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-16 h-16 animate-spin"><path d="M304 48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zm0 416a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM48 304a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm464-48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM142.9 437A48 48 0 1 0 75 369.1 48 48 0 1 0 142.9 437zm0-294.2A48 48 0 1 0 75 75a48 48 0 1 0 67.9 67.9zM369.1 437A48 48 0 1 0 437 369.1 48 48 0 1 0 369.1 437z"/></svg>
+          </div>
         </div>
-            <div>
-                <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" data-en="Your name">Tu nombre</label>
-                <input type="text" id="name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light placeholder:italic" placeholder="Escribe tu nombre completo" data-en="Write your full name" required>
+      </section>
+      <section
+        id="contact"
+        class="bg-white/60 border border-white dark:bg-gray-900 md:rounded-3xl relative">
+        <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+          <h2
+            class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white"
+            data-en="Contact Us">
+            Contáctanos
+          </h2>
+          <p
+            class="mb-8 lg:mb-16 font-light text-center text-gray-800 dark:text-gray-400 sm:text-xl"
+            data-en="Do you have questions? Want to request feedback about your project? Need advice about your Business plan? Let us know.">
+            ¿Tienes preguntas? ¿Quieres solicitar comentarios sobre tu proyecto?
+            ¿Necesitas asesoramiento sobre tu plan de Negocios? Haznos saber.
+          </p>
+          <form id="contact-form" action="#" class="space-y-8">
+            <div
+              id="spinner"
+              class="absolute inset-0 flex items-center justify-center hidden bg-white/50 fill-slate-500">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                class="w-16 h-16 animate-spin">
+                <path
+                  d="M304 48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zm0 416a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM48 304a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm464-48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM142.9 437A48 48 0 1 0 75 369.1 48 48 0 1 0 142.9 437zm0-294.2A48 48 0 1 0 75 75a48 48 0 1 0 67.9 67.9zM369.1 437A48 48 0 1 0 437 369.1 48 48 0 1 0 369.1 437z" />
+              </svg>
             </div>
             <div>
-                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" data-en="Your email">Tu email</label>
-                <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light placeholder:italic" placeholder="email@email.com" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required>
+              <label
+                for="name"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                data-en="Your name"
+                >Tu nombre</label
+              >
+              <input
+                type="text"
+                id="name"
+                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light placeholder:italic"
+                placeholder="Escribe tu nombre completo"
+                data-en="Write your full name"
+                required />
             </div>
             <div>
-                <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" data-en="Subject">Asunto</label>
-                <input type="text" id="subject" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light placeholder:italic" placeholder="Permítenos saber en qué te podemos ayudar" data-en="Let us know how we can help you" required>
+              <label
+                for="email"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                data-en="Your email"
+                >Tu email</label
+              >
+              <input
+                type="email"
+                id="email"
+                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light placeholder:italic"
+                placeholder="email@email.com"
+                pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+                required />
+            </div>
+            <div>
+              <label
+                for="subject"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                data-en="Subject"
+                >Asunto</label
+              >
+              <input
+                type="text"
+                id="subject"
+                class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light placeholder:italic"
+                placeholder="Permítenos saber en qué te podemos ayudar"
+                data-en="Let us know how we can help you"
+                required />
             </div>
             <div class="sm:col-span-2">
-                <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400" data-en="Your message">Tu mensaje</label>
-                <textarea id="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500  placeholder:italic" placeholder="Deja un comentario..." data-en="Leave a comment..." required></textarea>
+              <label
+                for="message"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
+                data-en="Your message"
+                >Tu mensaje</label
+              >
+              <textarea
+                id="message"
+                rows="6"
+                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 placeholder:italic"
+                placeholder="Deja un comentario..."
+                data-en="Leave a comment..."
+                required></textarea>
             </div>
-            <button type="submit" class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-600 sm:w-fit hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800" data-en="Send message">Enviar mensaje</button>
-        </form>
-    </div>
-  </section>
+            <button
+              type="submit"
+              class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-600 sm:w-fit hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+              data-en="Send message">
+              Enviar mensaje
+            </button>
+          </form>
+        </div>
+      </section>
 
-    <dialog id="submissionModal" tabindex="-1" aria-hidden="true" class="rounded-xl shadow-lg bg-white dark:bg-gray-800 w-full max-w-md">
-          <!-- Modal content -->
-          <div class="relative p-4 text-center sm:p-5">
-              <button type="button" class="text-gray-400 absolute top-2.5 right-2.5 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" id="closeModalButton">
-                <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-              </button>
-              <svg class="fill-green-500 dark:text-gray-800 w-11 h-11 mb-3.5 mx-auto" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-              <p id="modalMessage" class="mb-4 text-gray-800 dark:text-gray-300" data-en="Thank you!, we've received your message and will get in touch as soon as possible.">
-                ¡Gracias!, hemos recibido tu mensaje y nos pondremos en contacto lo antes posible.
-              </p>
-              <div class="flex justify-center items-center space-x-4">
-                  <button id="modalCloseButton" type="button" class="py-2 px-3 text-sm font-medium text-gray-800 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-primary-300 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600" data-en="Close">
-                      Cerrar
-                  </button>
-              </div>
-      </div>
-    </dialog>
-    
-    
-    <footer class="p-4 md:p-8 lg:p-10">
-      <div class="mx-auto max-w-screen-xl text-center">
-          <a href="#" class="flex justify-center items-center text-2xl font-semibold text-gray-900 dark:text-white">
-            <img src="./images/logo.svg" class="h-9 sm:h-24" alt="StartupJerez Logo" />
+      <dialog
+        id="submissionModal"
+        tabindex="-1"
+        aria-hidden="true"
+        class="rounded-xl shadow-lg bg-white dark:bg-gray-800 w-full max-w-md">
+        <!-- Modal content -->
+        <div class="relative p-4 text-center sm:p-5">
+          <button
+            type="button"
+            class="text-gray-400 absolute top-2.5 right-2.5 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+            id="closeModalButton">
+            <svg
+              aria-hidden="true"
+              class="w-5 h-5"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                fill-rule="evenodd"
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </button>
+          <svg
+            class="fill-green-500 dark:text-gray-800 w-11 h-11 mb-3.5 mx-auto"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512">
+            <path
+              d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
+          </svg>
+          <p
+            id="modalMessage"
+            class="mb-4 text-gray-800 dark:text-gray-300"
+            data-en="Thank you!, we've received your message and will get in touch as soon as possible.">
+            ¡Gracias!, hemos recibido tu mensaje y nos pondremos en contacto lo
+            antes posible.
+          </p>
+          <div class="flex justify-center items-center space-x-4">
+            <button
+              id="modalCloseButton"
+              type="button"
+              class="py-2 px-3 text-sm font-medium text-gray-800 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-primary-300 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
+              data-en="Close">
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </dialog>
+
+      <footer class="p-4 md:p-8 lg:p-10">
+        <div class="mx-auto max-w-screen-xl text-center">
+          <a
+            href="#"
+            class="flex justify-center items-center text-2xl font-semibold text-gray-900 dark:text-white">
+            <img
+              src="./images/logo.svg"
+              class="h-9 sm:h-24"
+              alt="StartupJerez Logo" />
           </a>
-          <p class="my-6 text-gray-800 dark:text-gray-400">StartupJerez · Comunidad de emprendedores en Jerez de la Frontera</p>
-          <ul class="flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white">
-              <li>
-                  <a href="https://www.clipin.fit/" target="_blank" class="mr-4 hover:underline md:mr-6 flex items-center">
-                    Clipin Fit
-                    <svg class="w-4 h-4 ml-1 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 14v4.833A1.166 1.166 0 0 1 16.833 20H5.167A1.167 1.167 0 0 1 4 18.833V7.167A1.166 1.166 0 0 1 5.167 6h4.618m4.447-2H20v5.768m-7.889 2.121 7.778-7.778"/>
-                    </svg>
-                  </a>
-              </li>
-              <li>
-                  <a href="https://academia.clipin.fit/" target="_blank" class="mr-4 hover:underline md:mr-6 flex items-center">
-                    Academia
-                    <svg class="w-4 h-4 ml-1 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 14v4.833A1.166 1.166 0 0 1 16.833 20H5.167A1.167 1.167 0 0 1 4 18.833V7.167A1.166 1.166 0 0 1 5.167 6h4.618m4.447-2H20v5.768m-7.889 2.121 7.778-7.778"/>
-                    </svg>
-                  </a>
-              </li>
-              <li>
-                  <a href="https://www.gelpreentreno.com/" target="_blank"class="hover:underline flex items-center">
-                    Gel Pre-Entreno
-                    <svg class="w-4 h-4 ml-1 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 14v4.833A1.166 1.166 0 0 1 16.833 20H5.167A1.167 1.167 0 0 1 4 18.833V7.167A1.166 1.166 0 0 1 5.167 6h4.618m4.447-2H20v5.768m-7.889 2.121 7.778-7.778"/>
-                    </svg>
-                  </a>
-              </li>
+          <p class="my-6 text-gray-800 dark:text-gray-400">
+            StartupJerez · Comunidad de emprendedores en Jerez de la Frontera
+          </p>
+          <ul
+            class="flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white">
+            <li>
+              <a
+                href="https://www.clipin.fit/"
+                target="_blank"
+                class="mr-4 hover:underline md:mr-6 flex items-center">
+                Clipin Fit
+                <svg
+                  class="w-4 h-4 ml-1 text-gray-800 dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24">
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M18 14v4.833A1.166 1.166 0 0 1 16.833 20H5.167A1.167 1.167 0 0 1 4 18.833V7.167A1.166 1.166 0 0 1 5.167 6h4.618m4.447-2H20v5.768m-7.889 2.121 7.778-7.778" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://academia.clipin.fit/"
+                target="_blank"
+                class="mr-4 hover:underline md:mr-6 flex items-center">
+                Academia
+                <svg
+                  class="w-4 h-4 ml-1 text-gray-800 dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24">
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M18 14v4.833A1.166 1.166 0 0 1 16.833 20H5.167A1.167 1.167 0 0 1 4 18.833V7.167A1.166 1.166 0 0 1 5.167 6h4.618m4.447-2H20v5.768m-7.889 2.121 7.778-7.778" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.gelpreentreno.com/"
+                target="_blank"
+                class="hover:underline flex items-center">
+                Gel Pre-Entreno
+                <svg
+                  class="w-4 h-4 ml-1 text-gray-800 dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24">
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M18 14v4.833A1.166 1.166 0 0 1 16.833 20H5.167A1.167 1.167 0 0 1 4 18.833V7.167A1.166 1.166 0 0 1 5.167 6h4.618m4.447-2H20v5.768m-7.889 2.121 7.778-7.778" />
+                </svg>
+              </a>
+            </li>
           </ul>
-          <span class="text-sm text-gray-800 sm:text-center dark:text-gray-400">2022-2024 </span>
-      </div>
-    </footer>
-</main>
-<script src="js/script.js"></script>
-<script src="js/airtable.js"></script>
-</body>
+          <span class="text-sm text-gray-800 sm:text-center dark:text-gray-400"
+            >2022-2024
+          </span>
+        </div>
+      </footer>
+    </main>
+    <script src="js/script.js"></script>
+    <script src="js/airtable.js"></script>
+  </body>
 </html>
