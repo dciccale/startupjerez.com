@@ -25,3 +25,8 @@ select {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
 }
+
+.scroll-logos {
+    animation: scroll 60s linear infinite;
+    will-change: transform;
+  }
