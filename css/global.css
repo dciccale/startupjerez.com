@@ -1,5 +1,5 @@
 :root {
-    scroll-padding-top: 96px;
+    scroll-padding-top: 124px;
     scroll-behavior: smooth;
 }
 
@@ -29,4 +29,8 @@ select {
 .scroll-logos {
     animation: scroll 60s linear infinite;
     will-change: transform;
+  }
+
+html.dark {
+
   }
