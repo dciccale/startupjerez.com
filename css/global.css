@@ -1,36 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
 :root {
-    scroll-padding-top: 124px;
-    scroll-behavior: smooth;
+  scroll-padding-top: 124px;
+  scroll-behavior: smooth;
 }
 
 @layer base {
-  html, body {
+
+  html,
+  body {
     font-family: "Noto Sans", sans-serif;
   }
 }
 
 .mask-blur {
-    -webkit-mask: linear-gradient(180deg,#000 0,rgba(0,0,0,.987) 15.5%,rgba(0,0,0,.951) 28.9%,rgba(0,0,0,.896) 40.4%,rgba(0,0,0,.825) 50.3%,rgba(0,0,0,.741) 58.6%,rgba(0,0,0,.648) 65.6%,rgba(0,0,0,.55) 71.4%,rgba(0,0,0,.45) 76.3%,rgba(0,0,0,.352) 80.5%,rgba(0,0,0,.259) 84.1%,rgba(0,0,0,.175) 87.3%,rgba(0,0,0,.104) 90.3%,rgba(0,0,0,.049) 93.3%,rgba(0,0,0,.013) 96.4%,transparent);
-    mask: linear-gradient(180deg,#000 0,rgba(0,0,0,.987) 15.5%,rgba(0,0,0,.951) 28.9%,rgba(0,0,0,.896) 40.4%,rgba(0,0,0,.825) 50.3%,rgba(0,0,0,.741) 58.6%,rgba(0,0,0,.648) 65.6%,rgba(0,0,0,.55) 71.4%,rgba(0,0,0,.45) 76.3%,rgba(0,0,0,.352) 80.5%,rgba(0,0,0,.259) 84.1%,rgba(0,0,0,.175) 87.3%,rgba(0,0,0,.104) 90.3%,rgba(0,0,0,.049) 93.3%,rgba(0,0,0,.013) 96.4%,transparent)
+  -webkit-mask: linear-gradient(180deg, #000 0, rgba(0, 0, 0, .987) 15.5%, rgba(0, 0, 0, .951) 28.9%, rgba(0, 0, 0, .896) 40.4%, rgba(0, 0, 0, .825) 50.3%, rgba(0, 0, 0, .741) 58.6%, rgba(0, 0, 0, .648) 65.6%, rgba(0, 0, 0, .55) 71.4%, rgba(0, 0, 0, .45) 76.3%, rgba(0, 0, 0, .352) 80.5%, rgba(0, 0, 0, .259) 84.1%, rgba(0, 0, 0, .175) 87.3%, rgba(0, 0, 0, .104) 90.3%, rgba(0, 0, 0, .049) 93.3%, rgba(0, 0, 0, .013) 96.4%, transparent);
+  mask: linear-gradient(180deg, #000 0, rgba(0, 0, 0, .987) 15.5%, rgba(0, 0, 0, .951) 28.9%, rgba(0, 0, 0, .896) 40.4%, rgba(0, 0, 0, .825) 50.3%, rgba(0, 0, 0, .741) 58.6%, rgba(0, 0, 0, .648) 65.6%, rgba(0, 0, 0, .55) 71.4%, rgba(0, 0, 0, .45) 76.3%, rgba(0, 0, 0, .352) 80.5%, rgba(0, 0, 0, .259) 84.1%, rgba(0, 0, 0, .175) 87.3%, rgba(0, 0, 0, .104) 90.3%, rgba(0, 0, 0, .049) 93.3%, rgba(0, 0, 0, .013) 96.4%, transparent)
 }
 
 select {
-    appearance: none;
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 10 6'%3E%3Cpath stroke='%236B7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m1 1 4 4 4-4'/%3E%3C/svg%3E");
-    background-position: right .75rem center;
-    background-repeat: no-repeat;
-    background-size: .75em .75em;
-    padding-right: 2.5rem !important;
-    cursor: pointer;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 10 6'%3E%3Cpath stroke='%236B7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m1 1 4 4 4-4'/%3E%3C/svg%3E");
+  background-position: right .75rem center;
+  background-repeat: no-repeat;
+  background-size: .75em .75em;
+  padding-right: 2.5rem !important;
+  cursor: pointer;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
 }
 
 .scroll-logos {
-    animation: scroll 60s linear infinite;
-    will-change: transform;
-  }
+  animation: scroll 60s linear infinite;
+  will-change: transform;
+}
 
-html.dark {
-
-  }
+html.dark {}
