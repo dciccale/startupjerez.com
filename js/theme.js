@@ -1,31 +1,54 @@
-// On page load or when changing themes, best to add inline in `head` to avoid FOUC
-if (
-  localStorage.theme === "dark" ||
-  (!("theme" in localStorage) &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches)
-) {
-  document.getElementById("dark-icon").removeAttribute("hidden");
-  document.getElementById("light-icon").setAttribute("hidden", true);
-} else {
-  document.getElementById("light-icon").removeAttribute("hidden");
-  document.getElementById("dark-icon").setAttribute("hidden", true);
-}
+(async () => {
+  const darkIcon = document.getElementById("dark-icon");
+  const lightIcon = document.getElementById("light-icon");
 
-// Function to toggle the theme
-function toggleTheme() {
-  if (document.documentElement.classList.contains("dark")) {
-    document.documentElement.classList.remove("dark");
-    document.getElementById("dark-icon").setAttribute("hidden", true);
-    document.getElementById("light-icon").removeAttribute("hidden");
-    localStorage.theme = "light";
-  } else {
-    document.documentElement.classList.add("dark");
-    document.getElementById("light-icon").setAttribute("hidden", true);
-    document.getElementById("dark-icon").removeAttribute("hidden");
-    localStorage.theme = "dark";
+  function isDarkModePreferred() {
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
   }
-}
 
-// Add event listener to the button
-document.getElementById("toggle-theme").addEventListener("click", toggleTheme);
+  function isDarkMode() {
+    const savedTheme = localStorage.theme;
+    return savedTheme === "dark" || (!savedTheme && isDarkModePreferred());
+  }
 
+  const modes = {
+    dark: {
+      showIcon: darkIcon,
+      hideIcon: lightIcon,
+    },
+    light: {
+      showIcon: lightIcon,
+      hideIcon: darkIcon,
+    },
+  };
+
+  function setMode(mode) {
+    const { showIcon, hideIcon } = modes[mode];
+    showIcon.removeAttribute("hidden");
+    hideIcon.setAttribute("hidden", true);
+  }
+
+  if (isDarkMode()) {
+    setMode("dark");
+  } else {
+    setMode("light");
+  }
+
+  // Function to toggle the theme
+  function toggleTheme() {
+    if (document.documentElement.classList.contains("dark")) {
+      document.documentElement.classList.remove("dark");
+      setMode("light");
+      localStorage.theme = "light";
+    } else {
+      document.documentElement.classList.add("dark");
+      setMode("dark");
+      localStorage.theme = "dark";
+    }
+  }
+
+  // Add event listener to the button
+  document
+    .getElementById("toggle-theme")
+    .addEventListener("click", toggleTheme);
+})();
